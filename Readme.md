@@ -1,4 +1,4 @@
-<h2 align="left">Hi 👋! My name is ... and I'm a ..., from ....</h2>
+<h2 align="left">Hi 👋! This is a website Dedicated for lewis Hamilton</h2>
 
 ###
 
@@ -9,7 +9,8 @@
 
 ###
 
-<img align="right" height="150" src="https://i.imgflip.com/65efzo.gif"  />
+<img align="right" height="150" src="https://github.com/user-attachments/assets/f3fa31cd-ef82-4636-b8cc-43cca44424ad" />
+"  />
 
 ###
 
