@@ -1,0 +1,121 @@
+/* ========================
+   LANDING PAGE STYLES
+   ======================== */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.landing-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -2px;
+}
+
+.landing-title .number {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.landing-tagline {
+    font-size: 1.25rem;
+    color: #aaa;
+    font-weight: 300;
+}
+
+.landing-content {
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+    padding: 2.5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.landing-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.landing-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+/* Slice Button Style */
+.slice {
+    --c1: #202020;
+    --c2: #00a1b7;
+    --size-letter: 24px;
+    padding: 0.5em 1em;
+    font-size: var(--size-letter);
+    background-color: transparent;
+    border: calc(var(--size-letter) / 6) solid var(--c2);
+    border-radius: 0.2em;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
+    margin-top: 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.slice > .text {
+    font-weight: 700;
+    color: var(--c2);
+    position: relative;
+    z-index: 1;
+    transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
+    display: block;
+}
+
+.slice > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.slice::after {
+    content: "";
+    width: 0;
+    height: calc(300% + 1em);
+    position: absolute;
+    translate: -50% -50%;
+    inset: 50%;
+    rotate: 30deg;
+    background-color: var(--c2);
+    transition: 1000ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.slice:hover > .text {
+    color: var(--c1);
+}
+
+.slice:hover::after {
+    width: calc(120% + 1em);
+}
+
+.slice:active {
+    scale: 0.98;
+    filter: brightness(0.9);
+}
+

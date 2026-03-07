@@ -12,4 +12,5 @@
 - [x] Added mobile responsive styles
 - [x] Added scroll animations
 - [x] Added navbar click animations
+- [x] Separated CSS into global.css, index.css, and home.css
 

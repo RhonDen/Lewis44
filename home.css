@@ -1,0 +1,165 @@
+/* ========================
+   HOME PAGE STYLES
+   ======================== */
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Active nav link animation */
+.nav-links a.active {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Nav click ripple effect */
+.nav-links a.clicked {
+    animation: navClick 0.4s ease;
+}
+
+@keyframes navClick {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(180deg, #000 0%, #111 100%);
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    color: #888;
+    margin-top: 1rem;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 5rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Achievements Grid */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.achievement-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.achievement-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.achievement-card p {
+    color: #888;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #111;
+    color: #666;
+    border-top: 1px solid #222;
+}
+
